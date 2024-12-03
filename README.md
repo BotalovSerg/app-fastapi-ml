@@ -20,3 +20,7 @@ openssl genrsa -out jwt-private.pem 2048
 # Extract the public key from the key pair, which can be used in a certificate
 openssl rsa -in jwt-private.pem -outform PEM -pubout -out jwt-public.pem
 ```
+```
+docker build -t app-fastapi .
+docker run --rm -d -p 80:80 app-fastapi
+```
